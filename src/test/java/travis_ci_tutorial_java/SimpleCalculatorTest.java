@@ -31,4 +31,10 @@ public class SimpleCalculatorTest {
 		assertEquals(calc.divide(4, 4), 1);
 
 	}
+
+	@Test
+	public void testDividebyZero(){
+		SimpleCalculator calc = new SimpleCalculator();
+		assertEquals(calc.divide(4, 0), 1);
+	}
 }
