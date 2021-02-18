@@ -12,7 +12,7 @@ public class SimpleCalculatorTest {
 		assertEquals(calc.add(1, 1), 2);
 	}
 
-	@Test
+		@Test
 	public void testSubtract(){
 		SimpleCalculator calc = new SimpleCalculator();
 		assertEquals(calc.minus(5, 3), 1);
@@ -33,8 +33,17 @@ public class SimpleCalculatorTest {
 	}
 
 	@Test
-	public void testDividebyZero(){
+	public void testDivideByZero(){
 		SimpleCalculator calc = new SimpleCalculator();
 		assertEquals(calc.divide(4, 0), 1);
+	}
+
+	@Test
+	public void testDivideByNonInteger(){
+		SimpleCalculator calc = new SimpleCalculator();
+		int value = calc.divide(9, 2);
+		double doubleValue;
+		doubleValue = value;
+		assertEquals(4.5, doubleValue, 0.0);
 	}
 }
