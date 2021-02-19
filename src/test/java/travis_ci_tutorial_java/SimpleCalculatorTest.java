@@ -15,7 +15,7 @@ public class SimpleCalculatorTest {
 		@Test
 	public void testSubtract(){
 		SimpleCalculator calc = new SimpleCalculator();
-		assertEquals(calc.minus(5, 3), 1);
+		assertEquals(calc.minus(5, 3), 2);
 	}
 
 	@Test
@@ -28,22 +28,19 @@ public class SimpleCalculatorTest {
 	@Test
 	public void testDivide(){
 		SimpleCalculator calc = new SimpleCalculator();
-		assertEquals(calc.divide(4, 4), 1);
-
+		assertEquals(1.0, calc.divide(4, 4), 0.0);
 	}
 
 	@Test
 	public void testDivideByZero(){
 		SimpleCalculator calc = new SimpleCalculator();
-		assertEquals(calc.divide(4, 0), 1);
+		assertEquals(1, calc.divide(4, 0),0.0);
 	}
 
 	@Test
 	public void testDivideByNonInteger(){
 		SimpleCalculator calc = new SimpleCalculator();
-		int value = calc.divide(9, 2);
-		double doubleValue;
-		doubleValue = value;
-		assertEquals(4.5, doubleValue, 0.0);
+		double value = calc.divide(9, 2);
+		assertEquals(4.5, value, 0.0);
 	}
 }
